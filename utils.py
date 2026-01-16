@@ -64,19 +64,20 @@ def get_words(data) -> tuple[list[str], list[str]]:
     return (sorted(words_unique), sorted(tags_unique))
 
 
-def prepare_data(words, data) -> list[tuple[numpy.array, str]]:
+def prepare_data(words: list[str], tags: list[str], data: tuple[list[str], str]) -> list[tuple[numpy.array, str]]:
     # output: list[tuple[numpy.array, str]] = []
     # for tokens, tag in data:
     #     tokens_bag_of_words = bag_of_words(words, tokens)
     #     output.append((tokens_bag_of_words, tag))
-
-    # return output
-    return [(bag_of_words(words, tokens), tag) for tokens, tag in data]
+    return [(bag_of_words(words, tokens), float(tags.index(tag))) for tokens, tag in data]
     
 
 if __name__ == "__main__":
     data = load_intents(path='intents.json')
     words_unique, tags_unique = get_words(data)
-    prepared_data = prepare_data(words=words_unique, data=data)
+    prepared_data = prepare_data(words=words_unique, tags=tags_unique, data=data)
     print(tags_unique)
     print(prepared_data)
+    print("\n####")
+
+

@@ -28,7 +28,8 @@
         "How do I get a library card?",
         "How to join the library?",
         "Can I sign up online?",
-        "Becoming a member"
+        "Becoming a member",
+        "What documents do you need to issue a library card?"
       ],
       "responses": [
         "You can sign up for a card at the front desk with a valid ID, or start your application on our website.",
@@ -62,12 +63,25 @@
       ]
     },
     {
+      "tag": "media",
+      "patterns": [
+        "Do you have movies on dvd?",
+        "Do you have movies on blue ray?",
+        "Do you have dvds?",
+        "Do you have video games?"
+      ],
+      "responses": [
+        "We have books, magazines, dvds, cds, blue rays, and video games."
+      ]
+    },
+    {
       "tag": "wifi",
       "patterns": [
         "Do you have wifi?",
         "What is the internet password?",
         "Is there free internet?",
-        "Can I use my laptop?"
+        "Can I use my laptop?",
+        "How can I connect to the internet?"
       ],
       "responses": [
         "Yes, we offer free high-speed WiFi. The network name is 'Library_Guest' and no password is required.",
