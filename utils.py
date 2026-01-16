@@ -69,15 +69,15 @@ def prepare_data(words: list[str], tags: list[str], data: tuple[list[str], str])
     # for tokens, tag in data:
     #     tokens_bag_of_words = bag_of_words(words, tokens)
     #     output.append((tokens_bag_of_words, tag))
-    return [(bag_of_words(words, tokens), float(tags.index(tag))) for tokens, tag in data]
-    
+    X_train = []
+    y_train = []
+
+    for tokens, tag in data:
+        X_train.append(bag_of_words(words, tokens))
+        y_train.append(tags.index(tag))
+
+    return numpy.array(X_train, dtype=numpy.float32), numpy.array(y_train)
+
 
 if __name__ == "__main__":
-    data = load_intents(path='intents.json')
-    words_unique, tags_unique = get_words(data)
-    prepared_data = prepare_data(words=words_unique, tags=tags_unique, data=data)
-    print(tags_unique)
-    print(prepared_data)
-    print("\n####")
-
-
+    pass
