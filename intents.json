@@ -1,0 +1,87 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Is the library open?", "Good morning"],
+      "responses": [
+        "Welcome to the City Library! How can I assist you today?",
+        "Hello! Looking for a specific book or library service?",
+        "Hi there! Happy to help with your research or account."
+      ]
+    },
+    {
+      "tag": "hours",
+      "patterns": [
+        "What are your hours?",
+        "When do you close?",
+        "Are you open on Sundays?",
+        "Opening times"
+      ],
+      "responses": [
+        "We are open Mon-Fri 9am-8pm, and Sat-Sun 10am-5pm.",
+        "Our current hours are 9am to 8pm on weekdays."
+      ]
+    },
+    {
+      "tag": "membership",
+      "patterns": [
+        "How do I get a library card?",
+        "How to join the library?",
+        "Can I sign up online?",
+        "Becoming a member"
+      ],
+      "responses": [
+        "You can sign up for a card at the front desk with a valid ID, or start your application on our website.",
+        "Membership is free for all residents! Just bring a proof of address to any branch."
+      ]
+    },
+    {
+      "tag": "borrowing",
+      "patterns": [
+        "How many books can I check out?",
+        "What is the loan period?",
+        "How long can I keep a book?",
+        "Borrowing limit"
+      ],
+      "responses": [
+        "You can borrow up to 10 items at a time for 21 days.",
+        "Standard loans are 3 weeks, and most items can be renewed twice if no one else is waiting."
+      ]
+    },
+    {
+      "tag": "fines",
+      "patterns": [
+        "Do you charge overdue fines?",
+        "Late fees",
+        "What happens if my book is late?",
+        "I lost a book"
+      ],
+      "responses": [
+        "We are now a fine-free library! However, you must pay the replacement cost for lost items.",
+        "There are no daily late fees, but your account will be blocked if items are more than 14 days overdue."
+      ]
+    },
+    {
+      "tag": "wifi",
+      "patterns": [
+        "Do you have wifi?",
+        "What is the internet password?",
+        "Is there free internet?",
+        "Can I use my laptop?"
+      ],
+      "responses": [
+        "Yes, we offer free high-speed WiFi. The network name is 'Library_Guest' and no password is required.",
+        "Free WiFi is available throughout the building for all visitors."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you", "I'm leaving", "Thank you, goodbye"],
+      "responses": [
+        "Happy reading! See you soon.",
+        "Goodbye! Don't forget to return your books on time.",
+        "Have a wonderful day!"
+      ]
+    }
+  ]
+}
